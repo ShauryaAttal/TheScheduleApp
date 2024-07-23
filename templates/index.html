@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Schedule</title>
+</head>
+<body>
+    <h1>Class Schedule</h1>
+    <div id="register">
+        <h2>Register</h2>
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="register()">Register</button>
+    </div>
+    <div id="login">
+        <h2>Login</h2>
+        <input type="email" id="login_email" placeholder="Email">
+        <input type="password" id="login_password" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+    <div id="schedule" style="display:none;">
+        <h2>Submit Schedule</h2>
+        <input type="text" id="user_id" placeholder="User ID" hidden>
+        <div>
+            <input type="text" id="period_1" placeholder="Period 1">
+            <input type="text" id="period_2" placeholder="Period 2">
+            <input type="text" id="period_3" placeholder="Period 3">
+            <input type="text" id="period_4" placeholder="Period 4">
+            <input type="text" id="period_5" placeholder="Period 5">
+            <input type="text" id="period_6" placeholder="Period 6">
+            <input type="text" id="period_7" placeholder="Period 7">
+        </div>
+        <button onclick="submitSchedule()">Submit Schedule</button>
+        <button onclick="getClassmates()">Get Classmates</button>
+    </div>
+    <div id="classmates" style="display:none;">
+        <h2>Classmates</h2>
+        <div id="classmates_list"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
